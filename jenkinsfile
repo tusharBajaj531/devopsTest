@@ -18,8 +18,8 @@ pipeline {
         stage('Build & Test') {
             steps {
                 sh 'python3 --version'
-                sh 'pip3 install flask'  # Install dependencies
-                sh 'python3 app.py &'    # Test app (background)
+                sh 'pip3 install flask'
+                sh 'python3 app.py &'
             }
         }
 
