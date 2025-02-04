@@ -16,7 +16,11 @@ pipeline {
 
 
         stage('SonarQube Analysis') {
-            def scannerHome = tool 'sq_sc';
+            environment {
+
+                scannerHome = tool 'sonar_scanner'
+
+            }
             steps {
                 withSonarQubeEnv('sq') {  // Name must match Jenkins config
                     sh '${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=devops-test'
