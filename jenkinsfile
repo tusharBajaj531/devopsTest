@@ -10,7 +10,7 @@ pipeline {
         // Stage 1: Checkout code from Git
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repo.git'
+                git branch: 'main', url: 'https://github.com/tusharBajaj531/devopsTest'
             }
         }
 
