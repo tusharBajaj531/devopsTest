@@ -14,6 +14,15 @@ pipeline {
             }
         }
 
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {  // Name must match Jenkins config
+                    sh 'sonar-scanner -Dsonar.projectKey=devops-test'
+                }
+            }
+        }
+
         // Stage 2: Build and Test (Optional)
 //        stage('Build & Test') {
  //           steps {
