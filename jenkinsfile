@@ -17,9 +17,9 @@ pipeline {
         // Stage 2: Build and Test (Optional)
         stage('Build & Test') {
             steps {
-                sh 'python3 --version'
-                sh 'pip3 install flask'
-                sh 'python3 app.py &'
+                sh 'python --version'
+                sh 'pip install -r requirements.txt'
+                sh 'python app.py &'
             }
         }
 
