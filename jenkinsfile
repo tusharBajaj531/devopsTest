@@ -15,13 +15,13 @@ pipeline {
         }
 
         // Stage 2: Build and Test (Optional)
-        stage('Build & Test') {
-            steps {
-                sh 'python --version'
-                sh 'pip install -r requirements.txt'
-                sh 'python app.py &'
-            }
-        }
+//        stage('Build & Test') {
+ //           steps {
+ //               sh 'python --version'
+ //               sh 'pip install -r requirements.txt'
+ //               sh 'python app.py &'
+ //           }
+ //       }
 
         // Stage 3: Build Docker Image
         stage('Docker Build') {
