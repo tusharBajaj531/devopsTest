@@ -17,7 +17,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sq-sc') {  // Name must match Jenkins config
+                withSonarQubeEnv('sq') {  // Name must match Jenkins config
                     sh 'sonar-scanner -Dsonar.projectKey=devops-test'
                 }
             }
